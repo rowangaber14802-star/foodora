@@ -1,0 +1,250 @@
+/* Nav Bar */
+.navbar{
+    font-family: Roboto ,sans-serif;
+    background-color: transparent;
+    position: fixed;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    z-index: 3;
+   
+}
+.navbar.fixed-brown {
+    background-color: #5C3D2E;
+}
+/* Logo */
+.navbar-brand{
+    color: 	#f2ebdd !important;
+    font-size: 35px;
+    font-family: "Macondo", cursive;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: -10px;
+}   
+
+.custom-underlines {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 40px;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  color: #333333;
+}
+.custom-underlines:after {
+  content: "";
+  background-color: #5C3D2E;
+  width: 150px;
+  height: .5px;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.custom-underlines::before {
+  content: "";
+  position: absolute;
+  bottom: -45%;
+  left: 50%;
+  width: 70px;
+  padding: 4px 0px 5px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #f2ebdd ;
+  transform: translate(-50%, -50%);
+}
+
+/* list */
+.navbar .navbar-nav .nav-link{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0 10px;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color:#c1a892 ;
+}
+.navbar.scrolled {
+    background-color: #5C3D2E; 
+}
+/* Home */
+.landing{
+    background-image: url(../img/home.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    font-family: "Source Sans 3", sans-serif;
+}
+.landing .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(24, 19, 16, 0.7); 
+  z-index: 1;
+  
+}
+.landing .text-center {
+  position: relative;
+  z-index: 2;
+}
+.landing .text-center h3{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+.landing .text-center h1{
+    color: #C8A888;
+    font-size: 80px;
+    font-weight: 700;
+    
+}
+.landing .text-center h4 {
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 auto;
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+/* Menu Section */
+#menuSection {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #fdfaf6; 
+  padding-top: 80px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+/* Category title */
+#menuSection .custom-underlines {
+  font-size: 36px;
+  color: #5C3D2E;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+#menuSection .custom-underlines {
+  font-size: 36px;
+  color: #5C3D2E; 
+  margin-bottom: 40px;
+}
+#menuSection .card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#menuSection .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+#menuSection .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 180px;
+  object-fit: cover;
+}
+
+#menuSection .card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c2f2f;
+  margin-top: 10px;
+}
+
+/* Loading spinner */
+#menuSection .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #5C3D2E;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  #menuSection .custom-underlines {
+    font-size: 28px;
+  }
+  #menuSection .card-img-top {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  #menuSection .custom-underlines {
+    font-size: 24px;
+  }
+  #menuSection .card-img-top {
+    height: 120px;
+  }
+}
+/* Preloader container */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fdfaf6; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Loader animation */
+.loader {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: -32px;
+  border-radius: 48%;
+  color: #5C3D2E; 
+  background: currentColor;
+  box-shadow: 32px 0 , -32px 0 , 64px 0;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 35% !important;
+  background:#C8A888; 
+  animation: move 5s linear infinite alternate; 
+}
+
+@keyframes move {
+  0%, 5%{
+    left: -32px;
+    width: 16px;
+  }
+  15%, 20%{
+    left: -32px;
+    width: 48px;
+  }
+  30%, 35%{
+    left: 0px;
+    width: 16px;
+  }
+  45%, 50%{
+    left: 0px;
+    width: 48px;
+  }
+  60%, 65%{
+    left: 32px;
+    width: 16px;
+  }
+  75%, 80% {
+    left: 32px;
+    width: 48px;
+  }
+  95%, 100% {
+    left: 64px;
+    width: 16px;
+  }
+}
+
